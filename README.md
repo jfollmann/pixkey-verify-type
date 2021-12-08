@@ -1,6 +1,6 @@
 # pixkey-verify-type
 
-### Install depedencies
+### Install dependencies
 ```bash
 npm i
 ```
