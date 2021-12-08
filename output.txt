@@ -1,0 +1,68 @@
+
+> verify-pixkey@1.0.0 run
+> node src
+
+{
+  inputValue: '742.673.199-52',
+  comment: 'CPF with format',
+  result: { type: 'cpf', normalize: '74267319952', format: '742.673.199-52' }
+}
+{
+  inputValue: '86438236004',
+  comment: 'CPF without format',
+  result: { type: 'cpf', normalize: '86438236004', format: '864.382.360-04' }
+}
+{
+  inputValue: 'jeff.follmann+bb@mailinator.com',
+  comment: 'Email',
+  result: {
+    type: 'email',
+    normalize: 'jeff.follmann+bb@mailinator.com',
+    format: 'jeff.follmann+bb@mailinator.com'
+  }
+}
+{
+  inputValue: '13.042.765/0001-36',
+  comment: 'CNPJ with format',
+  result: {
+    type: 'cnpj',
+    normalize: '13042765000136',
+    format: '13.042.765/0001-36'
+  }
+}
+{
+  inputValue: '98984724000111',
+  comment: 'CNPJ without format',
+  result: {
+    type: 'cnpj',
+    normalize: '98984724000111',
+    format: '98.984.724/0001-11'
+  }
+}
+{
+  inputValue: '(51)99818-1235',
+  comment: 'Phone with format',
+  result: {
+    type: 'phone',
+    normalize: '+5551998181235',
+    format: '(51) 99818-1235'
+  }
+}
+{
+  inputValue: '51998181235',
+  comment: 'Phone without format',
+  result: {
+    type: 'phone',
+    normalize: '+5551998181235',
+    format: '(51) 99818-1235'
+  }
+}
+{
+  inputValue: '89f2db4e-c038-4653-9fff-e23944b9505d',
+  comment: 'Unique Identifier',
+  result: {
+    type: 'random',
+    normalize: '89f2db4e-c038-4653-9fff-e23944b9505d',
+    format: '89f2db4e-c038-4653-9fff-e23944b9505d'
+  }
+}
