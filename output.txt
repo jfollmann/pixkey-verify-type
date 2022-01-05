@@ -1,7 +1,12 @@
 
-> verify-pixkey@1.0.0 run
+> verify-pixkey@1.0.0 app
 > node src
 
+{
+  inputValue: '111.673.199-52',
+  comment: 'CPF invalid',
+  result: 'Invalid Data'
+}
 {
   inputValue: '742.673.199-52',
   comment: 'CPF with format',
@@ -13,13 +18,9 @@
   result: { type: 'cpf', normalize: '86438236004', format: '864.382.360-04' }
 }
 {
-  inputValue: 'jeff.follmann+bb@mailinator.com',
-  comment: 'Email',
-  result: {
-    type: 'email',
-    normalize: 'jeff.follmann+bb@mailinator.com',
-    format: 'jeff.follmann+bb@mailinator.com'
-  }
+  inputValue: '11.142.765/0001-36',
+  comment: 'CNPJ invalid',
+  result: 'Invalid Data'
 }
 {
   inputValue: '13.042.765/0001-36',
@@ -40,6 +41,21 @@
   }
 }
 {
+  inputValue: 'jeff.follmann+bb.com',
+  comment: 'Email invalid',
+  result: 'Invalid Data'
+}
+{
+  inputValue: 'jeff.follmann+bb@mailinator.com',
+  comment: 'Email valid',
+  result: {
+    type: 'email',
+    normalize: 'jeff.follmann+bb@mailinator.com',
+    format: 'jeff.follmann+bb@mailinator.com'
+  }
+}
+{ inputValue: '123', comment: 'Phone invalid', result: 'Invalid Data' }
+{
   inputValue: '(51)99818-1235',
   comment: 'Phone with format',
   result: {
@@ -58,11 +74,11 @@
   }
 }
 {
-  inputValue: '89f2db4e-c038-4653-9fff-e23944b9505d',
+  inputValue: 'f2c3d673-4e46-479e-98be-38a45c7b05a0',
   comment: 'Unique Identifier',
   result: {
     type: 'random',
-    normalize: '89f2db4e-c038-4653-9fff-e23944b9505d',
-    format: '89f2db4e-c038-4653-9fff-e23944b9505d'
+    normalize: 'f2c3d673-4e46-479e-98be-38a45c7b05a0',
+    format: 'f2c3d673-4e46-479e-98be-38a45c7b05a0'
   }
 }
